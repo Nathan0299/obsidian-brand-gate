@@ -1,0 +1,56 @@
+{
+  "schema_version": "v1.alpha",
+  "directive_id": "DIR-HEALTHCARE-SECTOR-01",
+  "name": "Healthcare Sector — HIPAA & Clinical Integrity Compliance Gate",
+  "type": "pre_execution_intercept",
+  "target_layer": "CI_CD_PUBLICATION_PIPELINE",
+  
+  "constitutional_thresholds": {
+    "minimum_doctrine_compliance_score": 8.0,
+    "fatal_block_threshold": 7.99,
+    "weights": {
+      "tone_stability_index": 0.15,
+      "sovereignty_drift_index": 0.50,
+      "architectural_authority_index": 0.35
+    }
+  },
+
+  "evaluation_criteria": {
+    "tone_stability_index": {
+      "max_hyperbole_variance": 0.05,
+      "banned_lexicon_groups": ["casual_slang", "unverified_absolute_claims", "panic_inducing_semantics"],
+      "required_semantic_roots": ["clinical", "objective", "measured", "evidence-based"]
+    },
+    "sovereignty_drift_index": {
+      "unauthorized_commitment_tolerance": 0.0,
+      "liability_assumption_tolerance": 0.0,
+      "medical_guidance_tolerance": 0.0,
+      "prescription_language_tolerance": 0.0
+    },
+    "architectural_authority_index": {
+      "knowledge_vault_contradiction_tolerance": 0.0,
+      "canonical_truth_alignment": "strict",
+      "unverified_clinical_claim_tolerance": 0.0
+    }
+  },
+
+  "intercept_actions": {
+    "on_success": {
+      "action": "PERMIT_PUBLICATION",
+      "audit": "GENERATE_SHA256_RECEIPT",
+      "log_level": "INFO"
+    },
+    "on_failure": {
+      "action": "FATAL_PIPELINE_BLOCK",
+      "audit": "GENERATE_SHA256_VIOLATION_RECEIPT",
+      "log_level": "CRITICAL",
+      "alert_routing": ["hipaa_compliance_officer", "chief_medical_officer_dashboard"]
+    }
+  },
+
+  "override_policy": {
+    "allow_human_override": true,
+    "required_override_authority": "CHIEF_MEDICAL_OFFICER",
+    "override_audit_requirement": "MANDATORY_JUSTIFICATION_HASH"
+  }
+}

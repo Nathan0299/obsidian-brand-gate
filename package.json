@@ -1,0 +1,47 @@
+{
+  "name": "@obsidian-os/brand-gate",
+  "version": "1.0.0",
+  "description": "Deterministic pre-publication CI/CD gate enforcing corporate doctrine compliance via Constitutional State Grammar.",
+  "main": "dist/index.js",
+  "bin": {
+    "obsidian-brand-gate": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obsidian-os/obsidian-brand-gate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obsidian-os/obsidian-brand-gate/issues"
+  },
+  "homepage": "https://github.com/obsidian-os/obsidian-brand-gate#readme",
+  "scripts": {
+    "build": "tsc",
+    "evaluate": "node dist/index.js evaluate",
+    "test": "chmod +x tests/run_all.sh && ./tests/run_all.sh",
+    "dashboard": "npm run build && node dist/dashboard/server.js",
+    "benchmark": "npm run build && node dist/tests/benchmark.js",
+    "test:live": "npm run build && node dist/tests/live_llm_test.js"
+  },
+  "keywords": [
+    "ai-compliance",
+    "brand-governance",
+    "ci-cd-gate",
+    "deterministic-security",
+    "llm-hallucination"
+  ],
+  "author": "Obsidian OS",
+  "license": "Apache-2.0",
+  "private": false,
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/express": "^4.17.21",
+    "@types/node": "^25.9.2",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "typescript": "^6.0.3"
+  }
+}

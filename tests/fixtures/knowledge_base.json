@@ -1,0 +1,31 @@
+{
+  "facts": [
+    {
+      "topic": "System Hosting Architecture",
+      "description": "Our product is local-first and zero-trust, storing no customer data on external cloud databases.",
+      "canonical_truth": "Obsidian OS is an off-grid, self-hosted, local-first platform.",
+      "banned_assertions": [
+        "cloud-hosted",
+        "managed service",
+        "we host your data",
+        "our servers store"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "citation": "891 F.3d 445",
+      "case_name": "Thornton v. Apex Digital Advisors, Inc.",
+      "jurisdiction": "2d Cir.",
+      "year": 2024,
+      "status": "VALID"
+    },
+    {
+      "citation": "2025 WL 3847291",
+      "case_name": "Rodriguez v. NovaTrade Systems, LLC",
+      "jurisdiction": "S.D.N.Y.",
+      "year": 2025,
+      "status": "OVERRULED"
+    }
+  ]
+}

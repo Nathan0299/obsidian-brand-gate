@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  brand-gate-dashboard:
+    build: .
+    container_name: brand-gate-dashboard
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - OSBG_LEDGER_DB_PATH=/app/data/brand_gate_audit.db
+    volumes:
+      - brand-gate-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  brand-gate-data:

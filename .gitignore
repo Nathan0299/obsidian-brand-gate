@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.js
+!src/**
+.DS_Store
+sales_assets/
+evidence/
+brand_gate_audit.db*
+brand_gate_audit.json
+.env
