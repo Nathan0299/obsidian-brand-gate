@@ -32,21 +32,32 @@ The engine analyzes text files along three key indices to compute a weighted **D
 
 For detailed information on the math and inner workings, see [ARCHITECTURE.md](file:///Users/macpro/workspace/Obsidian_OS/sdk/obsidian-brand-gate/ARCHITECTURE.md).
 
----
-
 ## Installation & Setup
 
-1. **Install globally or in your project** via npm:
-   ```bash
-   npm install -g @obsidian-os/brand-gate
-   ```
+Prior to publication on the public npm registry, you can install and run the gate directly from the GitHub repository:
 
-2. **Verify installation**:
+### Option A: Clone & Link (Global CLI Access)
+1. **Clone the repository and build the engine:**
+   ```bash
+   git clone https://github.com/Nathan0299/obsidian-brand-gate.git
+   cd obsidian-brand-gate
+   npm install
+   npm run build
+   ```
+2. **Link the CLI command globally:**
+   ```bash
+   npm link
+   ```
+3. **Verify global installation:**
    ```bash
    obsidian-brand-gate --help
    ```
 
----
+### Option B: Local Project Dependency (Direct Git)
+Install the SDK directly from GitHub in your local Node.js project:
+```bash
+npm install github:Nathan0299/obsidian-brand-gate
+```
 
 ## Usage Guide
 

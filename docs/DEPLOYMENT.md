@@ -79,12 +79,12 @@ volumes:
 
 When deploying the gate as a pre-publication blocker in build runners (without the dashboard):
 
-1.  **Install the SDK package:**
+1.  **Install the SDK package directly from GitHub:**
     ```bash
-    npm install @obsidian-os/brand-gate
+    npm install github:Nathan0299/obsidian-brand-gate
     ```
 2.  **Integrate the CLI check step:**
-    Add a script in your package.json or deployment file executing the check:
+    Add a script in your project package.json or deployment file executing the check:
     ```bash
     npx obsidian-brand-gate evaluate --file ./drafts/newsletter.md --profile ./profiles/default.json
     ```
